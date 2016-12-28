@@ -1,13 +1,18 @@
 <?php
 /*
 	Plugin Name: Core Shortcodes
-	Description: This plugin defines shortcodes that would need to persist (even if the WordPress theme is changed in the future).
-	Plugin URI: http://joethomas.co
-	Version: 1.0.0
+	Description: This plugin defines shortcodes that need to persist (even if the WordPress theme is changed in the future).
+	Plugin URI: https://github.com/joethomas/core-shortcodes
+	Version: 1.0.1
 	Author: Joe Thomas
-	Author URI: http://joethomas.co
+	Author URI: https://github.com/joethomas
 	License: GNU General Public License v3.0
 	License URI: http://www.gnu.org/licenses/gpl-3.0.html
+	Text Domain: ultimate-click-to-copy
+	Domain Path: /languages/
+	
+	GitHub Plugin URI: https://github.com/joethomas/core-shortcodes
+	GitHub Branch: master
 */
 
 // Prevent direct file access
@@ -23,14 +28,14 @@ defined( 'ABSPATH' ) or exit;
  *
  * @since 1.0.0
  */
-function joe_shortcode_current_year() {
+function joe_cs_shortcode_current_year() {
 
 	$current_year = date( 'Y' );
 
 	return $current_year;
 
 }
-add_shortcode( 'current_year', 'joe_shortcode_current_year' );
+add_shortcode( 'current_year', 'joe_cs_shortcode_current_year' );
 
 /**
  * Site Name
@@ -39,11 +44,11 @@ add_shortcode( 'current_year', 'joe_shortcode_current_year' );
  *
  * @since 1.0.0
  */
-function joe_shortcode_site_name() {
+function joe_cs_shortcode_site_name() {
 
 	$site_name = get_bloginfo( 'name' );
 
 	return $site_name;
 
 }
-add_shortcode( 'site_name', 'joe_shortcode_site_name' );
+add_shortcode( 'site_name', 'joe_cs_shortcode_site_name' );
