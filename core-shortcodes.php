@@ -3,7 +3,7 @@
 	Plugin Name: Core Shortcodes
 	Description: This plugin defines shortcodes that need to persist (even if the WordPress theme is changed in the future).
 	Plugin URI: https://github.com/joethomas/core-shortcodes
-	Version: 1.1.0
+	Version: 1.1.1
 	Author: Joe Thomas
 	Author URI: https://github.com/joethomas
 	License: GNU General Public License v3.0
@@ -95,6 +95,23 @@ function joe_cs_shortcode_scroll_down_arrow( $atts ) {
 
 }
 add_shortcode( 'joe_scroll_down_arrow', 'joe_cs_shortcode_scroll_down_arrow' );
+
+/**
+ * Post Title
+ *
+ * Usage: [post_title]
+ *
+ * @link https://stackoverflow.com/q/16079490#16079704
+ * @since 1.1.1
+ */
+function joe_cs_shortcode_post_title() {
+
+	global $wp_query;
+
+	return get_post_title( $wp_query->post->ID );
+
+}
+add_shortcode( 'post_title', 'joe_cs_shortcode_post_title' );
 
 /**
  * Custom Field
