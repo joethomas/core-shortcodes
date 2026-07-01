@@ -3,20 +3,18 @@
 	Plugin Name: Core Shortcodes
 	Description: This plugin defines shortcodes that need to persist (even if the WordPress theme is changed in the future).
 	Plugin URI: https://github.com/joethomas/core-shortcodes
-	Version: 1.1.2
+	Version: 1.1.3
 	Author: Joe Thomas
 	Author URI: https://github.com/joethomas
-	License: GNU General Public License v3.0
-	License URI: http://www.gnu.org/licenses/gpl-3.0.html
-	Text Domain: core-shortcodes
-	Domain Path: /languages/
+	License: GPLv3 or later
+	License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-	GitHub Plugin URI: https://github.com/joethomas/core-shortcodes
+	GitHub Plugin URI: joethomas/core-shortcodes
 	GitHub Branch: master
 */
 
 // Prevent direct file access
-defined( 'ABSPATH' ) or exit;
+defined( 'ABSPATH' ) || exit;
 
 /* Shortcodes
 ==============================================================================*/
